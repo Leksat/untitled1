@@ -9,7 +9,7 @@ jobs:
     steps:
 
       - name: Publisher
-        uses: AmazeeLabs/publisher@edff5f985bff718cebe3ff1233551181d01e230a
+        uses: AmazeeLabs/publisher@89c663366c9a318f9d67c18c0410679b73e091df
 
       - name: Sleep
         run: sleep 20
