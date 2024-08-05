@@ -9,7 +9,7 @@ jobs:
     steps:
 
       - name: Publisher
-        uses: AmazeeLabs/publisher@24210f848b92ce422f2eff4779a740867e5eb23e
+        uses: AmazeeLabs/publisher@3ad240359137c82fb6b075ae034a21ef3dc78a05
         with:
           success_env_var: ALL_GOOD
           callback_url: 'https://8cd2-212-58-114-4.ngrok-free.app'
@@ -33,6 +33,5 @@ jobs:
 
       - name: Build
         run: |
-          sleep 20
-          exit 1
+          sleep 5
           echo "ALL_GOOD=1" >> $GITHUB_ENV
