@@ -7,5 +7,9 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
+
       - name: Publisher
-        uses: AmazeeLabs/publisher@b5c37ac484e65cf5b2579fe5da1d665fa345fc53
+        uses: AmazeeLabs/publisher@edff5f985bff718cebe3ff1233551181d01e230a
+
+      - name: Sleep
+        run: sleep 20
