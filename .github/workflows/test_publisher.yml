@@ -9,7 +9,7 @@ jobs:
     steps:
 
       - name: Publisher
-        uses: AmazeeLabs/publisher@205cf60dc4e6b1f7a49347bbbb451df40ed59e50
+        uses: AmazeeLabs/publisher@e41bf4b0ba8575dfd34227eed78ed370764f0ad1
         with:
           success_env_var: ALL_GOOD
           callback_url: 'https://8cd2-212-58-114-4.ngrok-free.app'
@@ -18,7 +18,6 @@ jobs:
             cache
           cache_key: 'publisher'
           env_vars: '{"FOO": "bar"}'
-          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check env vars
         run: echo "FOO is $FOO"
