@@ -9,10 +9,30 @@ jobs:
     steps:
 
       - name: Publisher
-        uses: AmazeeLabs/publisher@89c663366c9a318f9d67c18c0410679b73e091df
+        uses: AmazeeLabs/publisher@5064b64a1b3ff6207052128c94f1c46c310f5331
+        with:
+          success_env_var: ALL_GOOD
+          callback_url: 'https://8cd2-212-58-114-4.ngrok-free.app'
+          cache_paths: |
+            vendor
+            cache
+          cache_key: 'publisher'
+          env_vars: '{"FOO": "bar"}'
 
-      - name: Set env var
-        run: echo "AXXX=1" >> $GITHUB_ENV
+      - name: Check env vars
+        run: echo "FOO is $FOO"
+
+      - name: Check cache
+        run: |
+          cat cache/foo.txt || true
+
+      - name: Update cache
+        run: |
+          mkdir -p cache && echo "$RANDOM" > cache/foo.txt
+          cat cache/foo.txt
 
       - name: Sleep
-        run: sleep 20
+        run: |
+          sleep 20
+          if (( RANDOM % 2 )); then echo "OK"; else exit 1; fi
+          echo "ALL_GOOD=1" >> $GITHUB_ENV
