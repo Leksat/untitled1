@@ -11,5 +11,8 @@ jobs:
       - name: Publisher
         uses: AmazeeLabs/publisher@89c663366c9a318f9d67c18c0410679b73e091df
 
+      - name: Set env var
+        run: echo "AXXX=1" >> $GITHUB_ENV
+
       - name: Sleep
         run: sleep 20
