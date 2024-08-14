@@ -12,7 +12,7 @@ jobs:
     steps:
 
       - name: Publisher
-        uses: AmazeeLabs/publisher@77629a2244f6d389434d88c7c57fd28cb0fa79d5
+        uses: AmazeeLabs/publisher@06282c155fd6fe4682ecfa57cc91a6e1a7ae9909
         with:
           success_env_var: ALL_GOOD
           callback_url: 'https://8cd2-212-58-114-4.ngrok-free.app'
