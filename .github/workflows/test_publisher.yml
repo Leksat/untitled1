@@ -1,6 +1,10 @@
 name: Test Publisher
 on:
   workflow_dispatch:
+    inputs:
+      foo:
+        description: Foo
+        required: true
 
 jobs:
   test:
@@ -9,7 +13,7 @@ jobs:
     steps:
 
       - name: Publisher
-        uses: AmazeeLabs/publisher@221f9aa52ca68ba35ae0d4f66d355f26b2a865b4
+        uses: AmazeeLabs/publisher@fa732ff9a20ebe6faf4b11c82d6e8bdfd29019ec
         with:
           success_env_var: ALL_GOOD
           callback_url: 'https://8cd2-212-58-114-4.ngrok-free.app'
