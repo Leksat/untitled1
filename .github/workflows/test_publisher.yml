@@ -19,7 +19,7 @@ jobs:
             vendor
             cache
           cache_key: 'publisher'
-          env_vars: '{"1FOO": "bar"}'
+          env_vars: '{"FOO": "bar"}'
 
       - name: Check env vars
         run: echo "FOO is $FOO"
