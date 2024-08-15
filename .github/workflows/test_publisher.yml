@@ -12,7 +12,7 @@ jobs:
     steps:
 
       - name: Publisher
-        uses: AmazeeLabs/publisher@1525a97e6725cc83fe14b574aecfee28ef83c568
+        uses: AmazeeLabs/publisher@0c9b2957090701e1381ff08ca6afd488a7577c1b
         with:
           success_env_var_name: ALL_GOOD
           cache_paths: |
